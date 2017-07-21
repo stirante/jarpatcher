@@ -38,7 +38,6 @@ public class Patch implements Serializable {
                     else addToZip(out, a.getFilename(), a.getData());
                 }
             } else {
-                System.out.println("Leaving " + e.getName());
                 if (!e.isDirectory()) {
                     addToZip(out, e.getName(), toByteArray(src.getInputStream(e)));
                 } else {
